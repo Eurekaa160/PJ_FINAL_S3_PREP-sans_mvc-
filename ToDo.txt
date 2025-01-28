@@ -1,0 +1,77 @@
+objectif : gérer la production et la cueillette de thé
+
+details : 
+    -plusieurs variétés de thé
+    -différentes parcelles de cultivation de the
+    -Cueilleur : la personne qui cueille
+
+    -debut du mois : regeneration de the dans tt parcelles 
+
+
+            TECHINQUE 
+base : mysql 
+donnees de test 
+sans framework (ancienne methode) [mais juste au cas ou asiana methode mvc iany rah misy fotoana satria tamn io ny s5 mbola ts nianatr mvc]
+hebergement sur serveur ITU [on verra]
+nom et ETU membres au footer (footer an le page web ve sah an inn?)
+bootstrap ou template existant (rah misy manana idee de fangalana template gratuit ^^)
+lien pour voir une copie d’écran des scripts de création des tables
+lien google sheet public pour la liste des tâches (refa azo tsar le sujet ngamb)
+lien GIT accessible en public (efa ananan)
+
+
+            FONCTIONNALITES (1/3)
+
+        BACKOFFICE (page ADMIN)
+
+            -login admin (par defaut sur le formulaire)
+            -gestion de variete de the (nom variété de thé, occupation (ex : 1 pied occupe 1,8m2 ) [mety CRUD ngamb]
+            -gestion des parcelles (numero parcelle, surface en hectares, variete de the plante)
+            -gestion des cueilleurs (nom, genre, date naissance)
+            -gestion de categories de depenses (ex. engrais, carburant, logistique, ...)
+            -config montant salaire cueilleurs par kg 
+
+
+        FRONTOFFICE (page UTILISATEUR / USER)
+
+            -login user (par defaut sur le formulaire)
+
+            -page saisie cueillette
+                -date (de saisie de cueillette)
+                -choix cueilleur 
+                -choix parcelle 
+                -poids cueilli
+                    RQ * VALIDATION AJAX , SI POIDS > KG DE FEUILLE RESTANT SUR PARCELLE 
+
+            -page saisie depenses 
+                -date
+                -choix categorie depense [en lien avec gestion categories depenses]
+                -montant (par categorie depense ngamb)
+            
+            -page resultat 
+                -mettre date debut et date fin 
+                -global :
+                    -poids total cueillette 
+                    -poids restant sur les parcelles a la date fin 
+                    -cout de revient par kg 
+
+
+
+            FONCTIONNALITES (2/3)
+
+
+        BACKOFFICE (ADMIN)
+
+        -configuration des mois ou le the peut se regenerer (atw tsy automatique isak n 1 mois tsouni zan [peut dependre de la saison ohatra, afk sous forme checkboc TT])
+        -ajout configurations 
+            -poids minimal  journalier pour un cueilleur 
+            -%bonus (montant) pour les poids > au poids min requis
+            -%mallus (montant) poids < min requis
+        -ajout prix de vente par variete de the 
+
+
+        FRONTOFFICE (USER)
+
+        -page liste de paiements pour les cueilleurs (avec date debut et date fin)
+
+        
